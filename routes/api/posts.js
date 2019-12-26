@@ -11,14 +11,14 @@ const Profile = require("../../models/Profile");
 // Validation
 const validatePostInput = require("../../validation/post");
 
-// @route GET api/posts/tes
-// @desc Tests posts route
-// @access Public
+// @route   GET api/posts/test
+// @desc    Tests post route
+// @access  Public
 router.get("/test", (req, res) => res.json({ msg: "Posts Works" }));
 
-// @route GET api/posts
-// @desc Get posts
-// @access Public
+// @route   GET api/posts
+// @desc    Get posts
+// @access  Public
 router.get("/", (req, res) => {
   Post.find()
     .sort({ date: -1 })
@@ -26,9 +26,9 @@ router.get("/", (req, res) => {
     .catch(err => res.status(404).json({ nopostsfound: "No posts found" }));
 });
 
-// @route GET api/posts/:id
-// @desc Get post by id
-// @access Public
+// @route   GET api/posts/:id
+// @desc    Get post by id
+// @access  Public
 router.get("/:id", (req, res) => {
   Post.findById(req.params.id)
     .then(post => res.json(post))
@@ -37,9 +37,9 @@ router.get("/:id", (req, res) => {
     );
 });
 
-// @route POST api/posts
-// @desc Create post
-// @access Private
+// @route   POST api/posts
+// @desc    Create post
+// @access  Private
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
@@ -63,9 +63,9 @@ router.post(
   }
 );
 
-// @route DELETE api/posts/:id
-// @desc Delete post
-// @access Private
+// @route   DELETE api/posts/:id
+// @desc    Delete post
+// @access  Private
 router.delete(
   "/:id",
   passport.authenticate("jwt", { session: false }),
