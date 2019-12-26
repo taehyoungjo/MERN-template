@@ -1,7 +1,7 @@
 {
-  "name": "devconnector",
+  "name": "MERN-template",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "ADD DESCRIPTION HERE",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
