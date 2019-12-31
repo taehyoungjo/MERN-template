@@ -21,7 +21,7 @@ router.get("/test", (req, res) => res.json({ msg: "Users Works" }));
 // @route   POST api/users/test
 // @desc    Tests users route
 // @access  Public
-router.post("/test", (req, res) => res.json({ msg: "POST Users Works" }));
+router.post("/test", (req, res) => res.json({ msg: req.body }));
 
 // @route   GET api/users/register
 // @desc    Register user
