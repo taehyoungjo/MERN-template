@@ -2,7 +2,7 @@
 
 Standard MongoDB, Express.js, React.js, Node.js stack that can be used to start web-apps with profiles and posts.
 
-## Stack/Tools
+## Stack/Tools Overview
 
 - MongoDB
 - Mongoose
@@ -28,3 +28,7 @@ In the project directory, run:
 ### npm run dev
 
 Runs react & node in dev mode (using npm package concurrently)
+
+### git push heroku master
+
+Installs required npm modules and runs build
